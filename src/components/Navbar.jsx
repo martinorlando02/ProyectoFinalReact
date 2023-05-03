@@ -14,7 +14,7 @@ const Navbar = () => {
                     Inicio
                     </Link>
                     <MenuMarcas className="Link block p-4"/>
-                    <Link className="Link block p-4" to="/nosotros" >
+                    <Link className="Link block p-4" to="/SobreNosotros" >
                     Nosotros
                     </Link>
                     <Link className="Link block p-4" to="/contacto" >

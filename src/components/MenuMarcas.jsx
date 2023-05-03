@@ -16,19 +16,19 @@ const MenuMarcas = () => {
       </MenuHandler>
       <MenuList>
         <MenuItem>
-        <Link to="/zapatillas-marca/adidas">
+        <Link to="/marcas-marca/adidas">
             ADIDAS
           </Link></MenuItem>
         <MenuItem>
-        <Link to="/zapatillas-marca/nike">
+        <Link to="/marcas-marca/nike">
             NIKE
           </Link></MenuItem>
         <MenuItem>
-        <Link to="/zapatillas-marca/puma">
+        <Link to="/marcas-marca/puma">
             PUMA
           </Link></MenuItem>
           <MenuItem>
-        <Link to="/zapatillas-marca/converse">
+        <Link to="/marcas-marca/converse">
             CONVERSE
           </Link></MenuItem>
       </MenuList>

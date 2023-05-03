@@ -35,7 +35,7 @@ const MarcaDetail = () => {
 
   return (
     <div>
-      <h1>Album Details</h1>
+      <h1>Marca Details</h1>
       {marcaData.map((data) => {
         return <CardUser albumsData={data} key={data.id} />;
       })}

@@ -6,11 +6,14 @@ import { collection, query, getDocs, where } from "firebase/firestore";
 import { db } from "../firebase/firebaseConfig";
 
 import CardUser from "../components/CardUser";
+import Navbar from "../components/Navbar";
+
+import { Link } from "react-router-dom";
 
 // COMPONENTS
 
-const Zapatillas = () => {
-  const [modeloData, setModeloData] = useState([]);
+const ZapatillasMarca = () => {
+  const [marcaData, setMarcaData] = useState([]);
 
   let { marca } = useParams();
 
@@ -25,21 +28,28 @@ const Zapatillas = () => {
         docs.push({ ...doc.data(), id: doc.id });
       });
       // console.log(docs);
-      setModeloData(docs);
+      setMarcaData(docs);
     };
     getModelos();
   }, [marca]);
 
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
-    >
-      <h1>Albums by Music Genre</h1>
-      {modeloData.map((data) => {
-        return <CardUser albumsData={data} key={data.id} />;
-      })}
+    <div>
+      <Navbar />
+      <div>
+        <h1>Productos</h1>
+        {marcaData.map((data) => {
+          return (
+            <div key={data.id}>
+              <Link to={`/item/${data.id}`}>
+              <CardUser data={data} />
+              </Link>
+            </div>
+          )
+        })}
+      </div>
     </div>
   );
 };
 
-export default Zapatillas;
+export default ZapatillasMarca;
